@@ -1,0 +1,43 @@
+{
+  "name": "@motifx-community/i18n",
+  "version": "0.0.0",
+  "description": "Reactive translations (ICU subset, plurals, lazy locales, Intl formatting, RTL) for MotifJS (@motifx/core)",
+  "keywords": ["motifjs", "motifx", "motif", "ui", "i18n", "translations", "intl", "plurals", "rtl"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/motifjs-community/motifjs-i18n" },
+  "homepage": "https://motifjs.com/docs/i18n",
+  "bugs": { "url": "https://github.com/motifjs-community/motifjs-i18n/issues" },
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "bin": { "motifjs-i18n": "./bin/motifjs-i18n.mjs" },
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "bin", "README.md", "LICENSE"],
+  "scripts": {
+    "dev": "vite examples/basic --port 4700",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "example:build": "vite build examples/basic",
+    "keys": "node bin/motifjs-i18n.mjs keys examples/basic/src/locales/en.json examples/basic/src/keys.d.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint:jsx": "motif-lint",
+    "check": "npm run typecheck && npm run lint:jsx && npm test && npm run build && npm run example:build",
+    "prepublishOnly": "npm run check"
+  },
+  "peerDependencies": { "@motifx/core": "^1.2.0-rc.2" },
+  "devDependencies": {
+    "@motifx/compiler": "1.2.0-rc.2",
+    "@motifx/core": "1.2.0-rc.2",
+    "@types/node": "^24.19.1",
+    "jsdom": "^30.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  },
+  "engines": { "node": ">=22" },
+  "publishConfig": { "access": "public" }
+}

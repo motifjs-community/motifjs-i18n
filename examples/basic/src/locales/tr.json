@@ -1,0 +1,16 @@
+{
+  "title": "Çeviriler",
+  "greeting": "Merhaba, {name}!",
+  "nameLabel": "Adınız",
+  "namePlaceholder": "Ada",
+  "cart": {
+    "items": "{count, plural, =0 {Sepetiniz boş} other {Sepetinizde # ürün var}}",
+    "add": "Ekle",
+    "remove": "Çıkar"
+  },
+  "today": "Bugün {date}",
+  "price": "Fiyat: {price}",
+  "updated": "Güncellendi: {when}",
+  "terms": "<link>Kullanım koşullarını</link> kabul ediyorum.",
+  "loading": "Yükleniyor..."
+}

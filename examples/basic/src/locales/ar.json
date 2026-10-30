@@ -1,0 +1,16 @@
+{
+  "title": "الترجمات",
+  "greeting": "مرحبا يا {name}!",
+  "nameLabel": "اسمك",
+  "namePlaceholder": "آدا",
+  "cart": {
+    "items": "{count, plural, =0 {سلتك فارغة} one {منتج واحد في سلتك} two {منتجان في سلتك} few {# منتجات في سلتك} many {# منتجا في سلتك} other {# منتج في سلتك}}",
+    "add": "إضافة",
+    "remove": "إزالة"
+  },
+  "today": "اليوم هو {date}",
+  "price": "السعر: {price}",
+  "updated": "آخر تحديث {when}",
+  "terms": "أوافق على <link>شروط الاستخدام</link>.",
+  "loading": "جار التحميل..."
+}
