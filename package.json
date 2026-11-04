@@ -1,6 +1,6 @@
 {
   "name": "@motifx-community/i18n",
-  "version": "0.0.0",
+  "version": "0.1.0-beta.0",
   "description": "Reactive translations (ICU subset, plurals, lazy locales, Intl formatting, RTL) for MotifJS (@motifx/core)",
   "keywords": ["motifjs", "motifx", "motif", "ui", "i18n", "translations", "intl", "plurals", "rtl"],
   "license": "MIT",
@@ -15,7 +15,7 @@
     ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "bin", "README.md", "LICENSE"],
+  "files": ["dist", "bin", "llms.txt", "README.md", "CHANGELOG.md", "LICENSE"],
   "scripts": {
     "dev": "vite examples/basic --port 4700",
     "build": "vite build && tsc -p tsconfig.build.json",
@@ -39,5 +39,5 @@
     "vitest": "^5.0.3"
   },
   "engines": { "node": ">=22" },
-  "publishConfig": { "access": "public" }
+  "publishConfig": { "access": "public", "tag": "beta" }
 }

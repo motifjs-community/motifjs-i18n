@@ -6,7 +6,7 @@ export class App extends Component<HTMLDivElement> {
   state = reactive({ name: '', count: 2 });
   private opened = new Date();
 
-  view() {
+  override view() {
     return (
       <div class="app">
         <div class="bar">

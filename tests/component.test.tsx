@@ -23,7 +23,7 @@ describe('bound text', () => {
     const i18n = make();
     const { t } = i18n;
     class Page extends Component<HTMLDivElement> {
-      view() {
+      override view() {
         return (
           <div>
             <button title={() => t('tip')}>x</button>

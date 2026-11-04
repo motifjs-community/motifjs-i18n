@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { createI18n } from '../src';
+import { createI18n, type Messages } from '../src';
 
 const en = {
   hi: 'Hello {name}',
@@ -90,7 +90,7 @@ describe('lazy loading', () => {
     const load = vi.fn((l: string) =>
       l === 'bad'
         ? Promise.reject(new Error('404'))
-        : new Promise<{ default: object }>((r) => (release = () => r({ default: { hi: `hi-${l}` } }))),
+        : new Promise<{ default: Messages }>((r) => (release = () => r({ default: { hi: `hi-${l}` } }))),
     );
     const i18n = createI18n({ locale: 'en', fallback: 'en', messages: { en: { hi: 'hi-en', only: 'x' } }, load });
     await i18n.ready;
