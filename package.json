@@ -2,20 +2,47 @@
   "name": "@motifx-community/i18n",
   "version": "0.1.0-beta.0",
   "description": "Reactive translations (ICU subset, plurals, lazy locales, Intl formatting, RTL) for MotifJS (@motifx/core)",
-  "keywords": ["motifjs", "motifx", "motif", "ui", "i18n", "translations", "intl", "plurals", "rtl"],
+  "keywords": [
+    "motifjs",
+    "motifx",
+    "motif",
+    "ui",
+    "i18n",
+    "translations",
+    "intl",
+    "plurals",
+    "rtl"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/motifjs-community/motifjs-i18n" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motifjs-community/motifjs-i18n"
+  },
   "homepage": "https://motifjs.com/docs/i18n",
-  "bugs": { "url": "https://github.com/motifjs-community/motifjs-i18n/issues" },
+  "bugs": {
+    "url": "https://github.com/motifjs-community/motifjs-i18n/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "types": "./dist/index.d.ts",
-  "bin": { "motifjs-i18n": "./bin/motifjs-i18n.mjs" },
+  "bin": {
+    "motifjs-i18n": "./bin/motifjs-i18n.mjs"
+  },
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "bin", "llms.txt", "README.md", "CHANGELOG.md", "LICENSE"],
+  "files": [
+    "dist",
+    "bin",
+    "llms.txt",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "vite examples/basic --port 4700",
     "build": "vite build && tsc -p tsconfig.build.json",
@@ -28,16 +55,23 @@
     "check": "npm run typecheck && npm run lint:jsx && npm test && npm run build && npm run example:build",
     "prepublishOnly": "npm run check"
   },
-  "peerDependencies": { "@motifx/core": "^1.2.0-rc.2" },
+  "peerDependencies": {
+    "@motifx/core": "^1.2.0-rc.2"
+  },
   "devDependencies": {
-    "@motifx/compiler": "1.2.0-rc.25",
-    "@motifx/core": "1.2.0-rc.25",
+    "@motifx/compiler": "1.2.0-rc.27",
+    "@motifx/core": "1.2.0-rc.27",
     "@types/node": "^24.19.1",
     "jsdom": "^30.1.2",
     "typescript": "^7.0.2",
     "vite": "^8.3.2",
     "vitest": "^5.0.3"
   },
-  "engines": { "node": ">=22" },
-  "publishConfig": { "access": "public", "tag": "beta" }
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "beta"
+  }
 }
